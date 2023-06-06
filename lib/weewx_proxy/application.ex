@@ -5,6 +5,15 @@ defmodule WeewxProxy.Application do
 
   @impl true
   def start(_type, _args) do
+    _ =
+      case :logger.add_handlers(:systemd) do
+        :ok ->
+          :logger.remove_handler(:default)
+
+        _ ->
+          :logger.add_handler_filter(:default, :elixir_filter, {&:logger_filters.domain/2, {:log, :sub, [:elixir]}})
+      end
+
     children = [
       WeewxProxy.Mqtt,
       WeewxProxy.Publisher,

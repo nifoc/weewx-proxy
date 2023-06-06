@@ -73,6 +73,19 @@ let
       beamDeps = [ erlex ];
     };
 
+    enough = buildRebar3 rec {
+      name = "enough";
+      version = "0.1.0";
+
+      src = fetchHex {
+        pkg = "${name}";
+        version = "${version}";
+        sha256 = "18gr9cvjar9rrmcj0crgwjb4np4adfbwcaxijajhwpjzvamwfq04";
+      };
+
+      beamDeps = [];
+    };
+
     erlex = buildMix rec {
       name = "erlex";
       version = "0.2.6";
@@ -266,6 +279,19 @@ let
       };
 
       beamDeps = [];
+    };
+
+    systemd = buildRebar3 rec {
+      name = "systemd";
+      version = "0.6.2";
+
+      src = fetchHex {
+        pkg = "${name}";
+        version = "${version}";
+        sha256 = "1f082zydhgif5p8pzj4ii32j9p93psgrmgy7ax8v06hch08vjqjh";
+      };
+
+      beamDeps = [ enough ];
     };
 
     telemetry = buildRebar3 rec {

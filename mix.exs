@@ -27,6 +27,7 @@ defmodule WeewxProxy.MixProject do
       {:httpoison, "~> 2.1"},
       {:jason, "~> 1.4"},
       {:tz, "~> 0.26"},
+      {:systemd, "~> 0.6"},
       {:typed_struct, "~> 0.3.0", runtime: false},
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false}
     ]

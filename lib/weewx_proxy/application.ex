@@ -8,7 +8,8 @@ defmodule WeewxProxy.Application do
     children = [
       WeewxProxy.Mqtt,
       WeewxProxy.Publisher,
-      WeewxProxy.Http
+      WeewxProxy.Http,
+      :systemd.ready()
     ]
 
     opts = [strategy: :one_for_one, name: WeewxProxy.Supervisor]

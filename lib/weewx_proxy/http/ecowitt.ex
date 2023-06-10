@@ -69,9 +69,16 @@ defmodule WeewxProxy.HTTP.Ecowitt do
       # Indoor
       inTemp: Utils.parse_float(data["tempinf"]),
       inHumidity: Utils.parse_float(data["humidityin"]),
-      # Battery
-      soilMoistBatteryVoltage1: Utils.parse_float(data["soilbatt1"]),
-      soilTempBatteryVoltage1: Utils.parse_float(data["tf_batt1"])
+      # Battery Status: Outdoor sensor array
+      batteryStatus1: Utils.parse_integer(data["wh65batt"]),
+      # Battery Status: Lightning sensor
+      batteryStatus2: Utils.parse_integer(data["wh57batt"]),
+      # Battery Status: Indoor sensor
+      inTempBatteryStatus: Utils.parse_integer(data["wh25batt"]),
+      # Battery Voltage: Soil moisture sensor
+      batteryStatus3: Utils.parse_float(data["soilbatt1"]),
+      # Battery Voltage: Soil temperature sensor
+      batteryStatus4: Utils.parse_float(data["tf_batt1"])
     }
   end
 

@@ -179,12 +179,12 @@ let
 
     mime = buildMix rec {
       name = "mime";
-      version = "2.0.3";
+      version = "2.0.5";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "0szzdfalafpawjrrwbrplhkgxjv8837mlxbkpbn5xlj4vgq0p8r7";
+        sha256 = "0p50h0ki8ay5sraiqxiajgwy1829bvyagj65bj9wjny4cnin83fs";
       };
 
       beamDeps = [];
@@ -309,12 +309,12 @@ let
 
     tortoise311 = buildMix rec {
       name = "tortoise311";
-      version = "0.11.5";
+      version = "0.11.6";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "19cbc9xwd2sc5scvmrlfadxg5kfzxfa4yr5k1q13kcfivz5ry9v1";
+        sha256 = "1fskwqznhy12g70nw2r6bk7x7ymcmqicv2661sq9p165bpv5wshv";
       };
 
       beamDeps = [ gen_state_machine telemetry ];
@@ -335,12 +335,12 @@ let
 
     tz = buildMix rec {
       name = "tz";
-      version = "0.26.1";
+      version = "0.26.2";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "0z7madh4cwnrw4rdmlsgp34dr683ldky2d7nlzm0vzcw3sjcwf6s";
+        sha256 = "0s4yggr8d5192qkzrzx85xpgz6pg233hn14ll1w2f0qyvlc0cjr2";
       };
 
       beamDeps = [];

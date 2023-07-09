@@ -14,9 +14,9 @@
           pname = "weewx-proxy";
           version = "0.0.1";
 
-          erlang = pkgs.beam.interpreters.erlangR25;
+          erlang = pkgs.beam.interpreters.erlangR26;
           beamPackages = pkgs.beam.packagesWith erlang;
-          elixir = beamPackages.elixir_1_14;
+          elixir = beamPackages.elixir_1_15;
 
           inherit (pkgs.stdenv) isDarwin;
         in

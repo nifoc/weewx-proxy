@@ -57,13 +57,13 @@ defmodule WeewxProxy.Sdr.Ecowitt do
 
   @impl true
   def connection(:down, state) do
-    _ = Logger.warn("Connection has been dropped")
+    _ = Logger.warning("Connection has been dropped")
     {:ok, state}
   end
 
   @impl true
   def connection(:terminating, state) do
-    _ = Logger.warn("Connection is terminating")
+    _ = Logger.warning("Connection is terminating")
     {:ok, state}
   end
 
@@ -75,7 +75,7 @@ defmodule WeewxProxy.Sdr.Ecowitt do
 
   @impl true
   def subscription({:warn, [requested: req, accepted: qos]}, topic, state) do
-    _ = Logger.warn("Subscribed to `#{topic}'; requested #{req} but got accepted with QoS #{qos}")
+    _ = Logger.warning("Subscribed to `#{topic}'; requested #{req} but got accepted with QoS #{qos}")
     {:ok, state}
   end
 
@@ -103,7 +103,7 @@ defmodule WeewxProxy.Sdr.Ecowitt do
 
   @impl true
   def terminate(reason, _state) do
-    _ = Logger.warn("Client has been terminated with reason: `#{inspect(reason)}'")
+    _ = Logger.warning("Client has been terminated with reason: `#{inspect(reason)}'")
     :ok
   end
 
@@ -116,7 +116,7 @@ defmodule WeewxProxy.Sdr.Ecowitt do
     if handle_reading?(body) do
       body
     else
-      _ = Logger.warn("Ignoring reading: #{inspect(body)}")
+      _ = Logger.warning("Ignoring reading: #{inspect(body)}")
       nil
     end
   end

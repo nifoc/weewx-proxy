@@ -100,12 +100,12 @@ defmodule WeewxProxy.HTTP.PurpleAir do
         if handle_reading?(data) do
           data
         else
-          _ = Logger.warn("Ignoring reading: #{inspect(data)}")
+          _ = Logger.warning("Ignoring reading: #{inspect(data)}")
           nil
         end
 
       {:ok, response} ->
-        _ = Logger.warn("Unexpected response: #{inspect(response)}")
+        _ = Logger.warning("Unexpected response: #{inspect(response)}")
         nil
 
       {:error, error} ->

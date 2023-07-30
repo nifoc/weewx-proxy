@@ -1,4 +1,4 @@
-{ lib, beamPackages, overrides ? (x: y: {}) }:
+{ lib, beamPackages, overrides ? (x: y: { }) }:
 
 let
   buildRebar3 = lib.makeOverridable beamPackages.buildRebar3;
@@ -18,7 +18,7 @@ let
         sha256 = "0ha6vmf5p3xlbf5w1msa89frhvfk535rnyfybz9wdmh6vdms8v96";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     cowboy = buildErlangMk rec {
@@ -57,7 +57,7 @@ let
         sha256 = "1c4dgi8canscyjgddp22mjc69znvwy44wk3r7jrl2wvs6vv76fqn";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     dialyxir = buildMix rec {
@@ -83,7 +83,7 @@ let
         sha256 = "18gr9cvjar9rrmcj0crgwjb4np4adfbwcaxijajhwpjzvamwfq04";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     erlex = buildMix rec {
@@ -96,7 +96,7 @@ let
         sha256 = "0x8c1j62y748ldvlh46sxzv5514rpzm809vxn594vd7y25by5lif";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     gen_state_machine = buildMix rec {
@@ -109,7 +109,7 @@ let
         sha256 = "05gdy0cxsmg3j43xmd6vm3nzsi8vlk94kdzn15rypg5yfhjnan8a";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     hackney = buildRebar3 rec {
@@ -161,7 +161,7 @@ let
         sha256 = "18d70i31bz11nr6vgsjn5prvhkvwqbyf3xq22ck5cnsnzp6ixc7v";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     metrics = buildRebar3 rec {
@@ -174,7 +174,7 @@ let
         sha256 = "05lz15piphyhvvm3d1ldjyw0zsrvz50d2m5f2q3s8x2gvkfrmc39";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     mime = buildMix rec {
@@ -187,7 +187,7 @@ let
         sha256 = "0p50h0ki8ay5sraiqxiajgwy1829bvyagj65bj9wjny4cnin83fs";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     mimerl = buildRebar3 rec {
@@ -200,7 +200,7 @@ let
         sha256 = "08wkw73dy449n68ssrkz57gikfzqk3vfnf264s31jn5aa1b5hy7j";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     parse_trans = buildRebar3 rec {
@@ -213,7 +213,7 @@ let
         sha256 = "12w8ai6b5s6b4hnvkav7hwxd846zdd74r32f84nkcmjzi1vrbk87";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     plug = buildMix rec {
@@ -252,7 +252,7 @@ let
         sha256 = "0hnqgzc3zas7j7wycgnkkdhaji5farkqccy2n4p1gqj5ccfrlm16";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     ranch = buildRebar3 rec {
@@ -265,7 +265,7 @@ let
         sha256 = "1rfz5ld54pkd2w25jadyznia2vb7aw9bclck21fizargd39wzys9";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     ssl_verify_fun = buildRebar3 rec {
@@ -278,7 +278,7 @@ let
         sha256 = "1y37pj5q6gk1vrnwg1vraws9yihrv9g4133w2qq1sh1piw71jk7y";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     systemd = buildRebar3 rec {
@@ -304,7 +304,7 @@ let
         sha256 = "1mgyx9zw92g6w8fp9pblm3b0bghwxwwcbslrixq23ipzisfwxnfs";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     tortoise311 = buildMix rec {
@@ -330,7 +330,7 @@ let
         sha256 = "0v8v3l8j7g3ran3f9gc2nc1mkj6kwfdr6kshm2cf3r0zlv1xa2y5";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     tz = buildMix rec {
@@ -343,7 +343,7 @@ let
         sha256 = "0s4yggr8d5192qkzrzx85xpgz6pg233hn14ll1w2f0qyvlc0cjr2";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
 
     unicode_util_compat = buildRebar3 rec {
@@ -356,8 +356,9 @@ let
         sha256 = "08952lw8cjdw8w171lv8wqbrxc4rcmb3jhkrdb7n06gngpbfdvi5";
       };
 
-      beamDeps = [];
+      beamDeps = [ ];
     };
   };
-in self
+in
+self
 

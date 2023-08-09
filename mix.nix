@@ -309,12 +309,12 @@ let
 
     tortoise311 = buildMix rec {
       name = "tortoise311";
-      version = "0.11.6";
+      version = "0.11.7";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "1fskwqznhy12g70nw2r6bk7x7ymcmqicv2661sq9p165bpv5wshv";
+        sha256 = "1vsvpaww0q78wdyv6z0c7sh86a5vlg4r8cij6g24gash1faczxqf";
       };
 
       beamDeps = [ gen_state_machine telemetry ];

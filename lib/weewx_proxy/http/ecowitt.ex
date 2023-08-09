@@ -62,7 +62,7 @@ defmodule WeewxProxy.HTTP.Ecowitt do
       UV: Utils.parse_float(data["uv"]),
       radiation: Utils.parse_float(data["solarradiation"]),
       soilMoist1: Utils.parse_float(data["soilmoisture1"]),
-      soilTemp1: Utils.parse_float(data["tf_ch1"]),
+      soilTemp1: Utils.parse_float(data["tf_ch2"]),
       lightning_strike_count: calculate_lightning_strike_count(data),
       lightning_last_det_time: Utils.parse_integer(data["lightning_time"]),
       lightning_distance: calculate_lightning_distance(data),

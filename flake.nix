@@ -120,7 +120,6 @@
               ]);
 
             packages = [
-              beamPackages.elixir-ls
               pkgs.mix2nix
               pkgs.mosquitto
             ];
